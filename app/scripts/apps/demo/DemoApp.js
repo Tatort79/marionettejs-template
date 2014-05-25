@@ -28,7 +28,7 @@ define(['application', 'loglevel'], function (App, log) {
             showDemo: function (criterion) {
                 require(['apps/demo/DemoController'], function (DemoController) {
                     executeAction(DemoController.showDemo, criterion);
-                    App.execute('set:active:header', '/demo');
+                    App.execute('set:active:navigation', '/demo');
                 });
             }
         };

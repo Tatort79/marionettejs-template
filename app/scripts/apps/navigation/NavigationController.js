@@ -19,7 +19,7 @@ define(['application', 'apps/navigation/NavigationView', 'underscore'], function
             });
         },
 
-        setActiveHeader: function (headerUrl) {
+        setActiveNavigation: function (headerUrl) {
             var links = App.request('header:entities');
             var headerToSelect = links.find(function (header) {
                 return header.get('url') === headerUrl;

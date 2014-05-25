@@ -19,7 +19,9 @@ define(['application',
             },
 
             onRender: function () {
+                console.log(this.model);
                 if (this.model.selected) {
+                    
                     // add class so Bootstrap will highlight the active entry in the navbar
                     this.$el.addClass('active');
                 }
@@ -28,18 +30,10 @@ define(['application',
 
         views.Navigation = Backbone.Marionette.CompositeView.extend({
             template: listTpl,
-            className: 'aaa',
             itemView: views.NavigationItem,
             itemViewContainer: 'ul',
 
-            events: {
-                'click a.brand': 'brandClicked'
-            },
-
-            brandClicked: function (e) {
-                e.preventDefault();
-                this.trigger('brand:clicked');
-            }
+           
         });
         return views;
     });

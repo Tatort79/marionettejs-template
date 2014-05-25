@@ -27,14 +27,14 @@ define(['application', 'loglevel'], function (App, log) {
         var API = {
             showStart: function (criterion) {
                 require(['apps/default/DefaultController'], function (DefaultController) {
-                    App.execute('set:active:header', '/start');
+                    App.execute('set:active:navigation', '/start');
                     executeAction(DefaultController.showStart, criterion);
                 });
             },
 
             showHello: function (name) {
                 require(['apps/default/DefaultController'], function (DefaultController) {
-                    App.execute('set:active:header', '/hello/Name');
+                    App.execute('set:active:navigation', '/hello/Name');
                     executeAction(DefaultController.showHello, name);
                 });
             }
