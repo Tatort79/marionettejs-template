@@ -61,6 +61,6 @@ app.get(catchAllNonStatic, configMiddleware, function (req, res) {
     res.sendfile(path.join(__dirname, config.path.public + '/index.html'));
 });
 
-http.createServer(app).listen(app.get('port'), function () {
+http.createServer(app).listen(app.get('port'),'0.0.0.0', function () {
     logger.log('info', 'Server listening on port %s', app.get('port'));
 });

@@ -28,7 +28,7 @@ require.config({
         'bootstrap.button': { deps: ['jquery'] },
         'bootstrap.carousel': { deps: ['jquery'] },
         'bootstrap.collapse': { deps: ['jquery'] },
-        'bootstrap.dropdown': { deps: ['jquery'] },
+        'bsPopover': { deps: ['jquery'] },
         'bootstrap.modal': { deps: ['jquery'] },
         'bootstrap.popover': { deps: ['jquery'] },
         'bootstrap.scrollspy': { deps: ['jquery'] },
@@ -49,13 +49,13 @@ require.config({
         'backbone.babysitter': '../bower_components/backbone.babysitter/lib/backbone.babysitter',
         'backbone.picky': '../bower_components/backbone.picky/lib/amd/backbone.picky',
 
-        /* alias the bootstrap js lib */
+
         'bootstrap.affix': '../bower_components/bootstrap/js/affix',
         'bootstrap.alert': '../bower_components/bootstrap/js/alert',
         'bootstrap.button': '../bower_components/bootstrap/js/button',
         'bootstrap.carousel': '../bower_components/bootstrap/js/carousel',
         'bootstrap.collapse': '../bower_components/bootstrap/js/collapse',
-        'bootstrap.dropdown': '../bower_components/bootstrap/js/dropdown',
+        'bsPopover': '../bower_components/bootstrap/js/dropdown',
         'bootstrap.modal': '../bower_components/bootstrap/js/modal',
         'bootstrap.popover': '../bower_components/bootstrap/js/popover',
         'bootstrap.scrollspy': '../bower_components/bootstrap/js/scrollspy',

@@ -1,17 +1,17 @@
 define(['application', 'apps/header/HeaderController'], function (App, HeaderController) {
     App.module('HeaderApp', function (HeaderApp) {
         var API = {
-            listHeader: function () {
-                HeaderController.listHeader();
+            listCustomers: function () {
+                HeaderController.listCustomers();
             }
         };
 
-        App.commands.setHandler('set:active:header', function (name) {
-            HeaderController.setActiveHeader(name);
+        App.commands.setHandler('set:active:customer', function (name) {
+            HeaderController.setActiveCustomer(name);
         });
 
         HeaderApp.on('start', function () {
-            API.listHeader();
+            API.listCustomers();
         });
     });
 
