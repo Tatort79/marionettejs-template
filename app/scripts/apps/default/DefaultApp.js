@@ -20,7 +20,8 @@ define(['application', 'loglevel'], function (App, log) {
         DefaultAppRouter.Router = Backbone.Marionette.AppRouter.extend({
             appRoutes: {
                 'start': 'showStart',
-                'hello/:name': 'showHello'
+                'playlists': 'showPlaylists',
+                'police': 'showPolice'
             }
         });
 
@@ -32,10 +33,17 @@ define(['application', 'loglevel'], function (App, log) {
                 });
             },
 
-            showHello: function (name) {
+            showPlaylists: function () {
                 require(['apps/default/DefaultController'], function (DefaultController) {
-                    App.execute('set:active:navigation', '/hello/Name');
-                    executeAction(DefaultController.showHello, name);
+                    App.execute('set:active:navigation', '/playlists');
+                    executeAction(DefaultController.showPlaylists);
+                });
+            },
+
+            showPolice: function () {
+                require(['apps/default/DefaultController'], function (DefaultController) {
+                    App.execute('set:active:navigation', '/police');
+                    executeAction(DefaultController.showPolice);
                 });
             }
         };
@@ -45,9 +53,14 @@ define(['application', 'loglevel'], function (App, log) {
             API.showStart();
         });
 
-        App.on('default:hello', function (name) {
-            App.navigate('hello/' + name);
-            API.showHello(name);
+        App.on('default:playlists', function () {
+            App.navigate('playlists');
+            API.showPlaylists();
+        });
+
+        App.on('default:police', function () {
+            App.navigate('police');
+            API.showPolice();
         });
 
         App.addInitializer(function () {

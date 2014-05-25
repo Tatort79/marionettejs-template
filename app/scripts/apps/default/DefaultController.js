@@ -9,16 +9,19 @@ define(['application', 'apps/default/DefaultView'], function (App, View) {
             App.mainRegion.show(view);
         },
 
-        showHello: function (name) {
+        showPlaylists: function (name) {
             require(['entities/default'], function () {
                 var fetchEntity = App.request('test:hello', name);
-                $.when(fetchEntity).done(function (entity) {
-                    var view = new View.Hello({
-                        model: entity
-                    });
-                    App.mainRegion.show(view);
-                });
+                var view = new View.Hello();
+                App.mainRegion.show(view);
+                
             });
+        },
+
+        showPolice: function (name) {
+            var view = new View.Police();
+            App.mainRegion.show(view);
+           
         }
     };
 });

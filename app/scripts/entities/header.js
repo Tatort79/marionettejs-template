@@ -18,9 +18,9 @@ define(['application', 'backbone.picky'], function (App) {
 
         var initializeHeaders = function () {
             Entities.headers = new Entities.HeaderCollection([
-                { name: 'Dashboard', icon: 'home', url: '/start', navigationTrigger: 'default:start' },
-                { name: 'API-Accounts', icon: 'inbox', url: '/hello/Name', navigationTrigger: ['default:hello', 'Name'] },
-                { name: 'Music-Playlists', icon: 'bar-chart-o', url: '/masterdetail', navigationTrigger: 'masterdetail:start' },
+                { name: 'Home', icon: 'home', url: '/start', navigationTrigger: 'default:start' },
+                { name: 'API-Accounts', icon: 'inbox', url: '/police', navigationTrigger: 'default:police' },
+                { name: 'Music-Playlists', icon: 'bar-chart-o', url: '/playlists', navigationTrigger: 'default:playlists' },
                 { name: 'Administration', icon: 'desktop', url: '/demo', navigationTrigger: 'demo:demo' }
             ]);
         };
